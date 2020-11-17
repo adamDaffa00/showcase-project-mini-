@@ -1,0 +1,43 @@
+.ourServices{
+	padding: 0;
+}
+.ourServices h2{
+	font-size: 3em;
+	font-weight: 700;
+	text-align: right;
+	color: rgba(0,0,0,.5);
+	margin: 15px 0;
+}
+.ourServices .service{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+}
+.ourServices hr{
+	border: none;
+	height: 3px;
+	width: 40%;
+	margin: 20px 0 20px auto;
+	background: rgba(0,0,0,.5);
+}
+.ourServices .service > div{
+	display: flex;
+	flex-wrap: wrap;
+}
+.ourServices .service > div:nth-child(2),.service > div:nth-child(5){
+	flex-wrap: wrap-reverse;
+}
+.ourServices .service > div .wrapIcon{
+	height: 200px;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+}
+.ourServices .service > div .serviceContent{
+	height: 200px;
+	width: 100%;
+	padding: 10px;
+}
+.ourServices .service > div .serviceContent h4{
+	font-size: 1.4em;
+	font-weight: 670;
+	margin-bottom: 10px;
+}

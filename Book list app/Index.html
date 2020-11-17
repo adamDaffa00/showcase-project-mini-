@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+    <title> mybooklist app</title>
+   <link rel="stylesheet" href="bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+  </head>
+  <body>
+    
+    <div class="container mt-4">
+      <h1 class="display-4 text-center"><i class="fas fa-book-open text-primary"></i> my <span class="text-primary"> book</span> list </h1>
+      <form id="book-form">
+        <div class="form-group">
+          <label for="title"> title </label>
+          <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="author"> author </label>
+          <input type="text" id="author" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="isbn"> isbn </label>
+          <input type="text" id="isbn" class="form-control">
+        </div>
+        <input type="submit" value="add book" class="btn btn-primary btn-block">
+      </form>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th> title </th>
+            <th> author </th>
+            <th> isbn </th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" charset="utf-8" src="App.js">
+    
+    </script>
+  </body>
+</html>

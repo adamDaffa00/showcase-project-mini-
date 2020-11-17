@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <title> notes </title>
+  <script defer src="component/note-item.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="component/note-list.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="component/note-modal.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="component/nav-bar.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="component/empty-list.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="data-localstorage.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="index.js" type='text/javascript' charset="utf-8"></script>
+  <script defer src="script.js" type='text/javascript' charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+  
+      <nav-bar class="navbar"> 
+      </nav-bar>
+    
+      <empty-list class="empty-list">
+      </empty-list>
+     
+      <section class="list-note hide-list-note">
+        <note-list>
+        </note-list>
+      </section>
+      
+      <section class="modal-field-section">
+        <div class="field-topbar">
+          <div class="back-icon">
+            <button id="cancel"> <i class="fas fa-chevron-left"></i> </button>
+          </div>
+          <div class="setting-icon">
+            <button id="add-new"> <i class="fas fa-check"></i> </button>
+            <button id="clear"> <i class="fas fa-trash"></i> </button>
+          </div>
+        </div>
+        <div class="field-text">
+          <h1> <input type="text" class="title" id="title" placeholder="judul"> </h1>
+          <textarea id="textarea" placeholder="ketik catatan" data-autoresize rows="2"></textarea>
+        </div>
+      </section>
+  </div>
+</body>
+</html>

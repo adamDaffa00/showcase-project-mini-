@@ -1,0 +1,22 @@
+.gallery{
+	padding: 20px 0;
+}
+.gallery h2{
+	font-size: 3em;
+	font-weight: 700;
+	text-align: left;
+	color: rgba(0,0,0,.5);
+	margin: 15px 0;
+}
+.gallery hr{
+	border: none;
+	height: 3px;
+	width: 40%;
+	margin: 20px 0;
+	background: rgba(0,0,0,.5);
+}
+.gallery ul{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+	margin: auto;
+}

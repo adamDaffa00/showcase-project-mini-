@@ -1,0 +1,92 @@
+.Teams .myTeams > li{
+  width: 100%;
+  height: auto;
+  background: url("../path/4.jpg") no-repeat left;
+  background-size: 35% 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 4em 0;
+  position: relative;
+}
+ .Teams h2{
+  color: rgba(0,0,0,.5);
+	font-size: 3em;
+	font-weight: 700;	
+}
+.Teams hr{
+	border: none;
+	height: 3px;
+	width: 40%;
+	margin: 20px 0;
+	background: rgba(0,0,0,.5);
+}
+.Teams .myTeams > li:nth-child(even){
+  justify-content: flex-start;
+  background-position: right;
+}
+.Teams .myTeams > li > div{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Teams .myTeams > li > div .miniGallery{
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template: 100px / repeat(5,1fr);
+  gap: 9px;
+  padding: 9px;
+}
+.myTeams > li > div .text{
+  padding: 10px;
+  color: rgba(0,0,0,.5);
+}
+.Teams .myTeams > li:nth-child(even) div .text{
+  text-align: right;
+  color: rgba(0,0,0,.5);
+}
+.myTeams > li > div .team h3{
+  font-size: 2.3em;
+  font-weight: 600;
+}
+.myTeams > li div > .info{
+  display: flex;
+  flex-wrap: wrap;
+}
+.myTeams > li:nth-child(even) div .info .socialBar h4{
+  text-align: right;
+}
+
+.info .socialBar .socialWrap{
+  display: flex;
+}
+.myTeams > li:nth-child(even) div .info 
+.socialBar .socialWrap{
+  justify-content: flex-end;
+  width: 100%;
+}
+.info .socialBar .socialWrap span{
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: black;
+  margin: 0 5px;
+  /*border-radius: 50%;*/
+}
+
+.info .textWrap{
+  width: 60%;
+}
+.info .socialBar{
+  width: 40%;
+}
+.info h4{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+.myTeams > li  .teamDescription p{
+  font-size: 1.2em;
+}

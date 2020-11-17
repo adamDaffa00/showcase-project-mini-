@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> quiz app </title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+  <body>
+   <div class="container">
+     <div id="end" class="flex-center flex-column">
+       <h1 id="finalScore"> 0 </h1>
+       <form action="">
+         <input type="text" placeholder="username" id="username" name="username">
+         <button type="submit" 
+         class="btn"
+         id="saveScoreBtn" 
+         disabled
+         onclick="saveHighScore(event)"> save </button>
+         </form>
+         <a href="game.html" class="btn"> play again </a>
+         <a href="/index.html" class="btn"> go to home </a>
+     </div>
+   </div>
+   
+   <script src="end.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

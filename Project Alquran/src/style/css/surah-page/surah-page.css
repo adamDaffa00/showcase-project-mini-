@@ -1,0 +1,224 @@
+/* style for page surah */
+
+.content-quran ul .ayat > .content-quran-wrap{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 40px auto;
+  background: #f1f2f1;
+  overflow: hidden;
+  align-items: center;
+  border: .4px solid rgba(0,0,0,.5);
+}
+.content-quran ul .ayat > .content-quran-wrap div{
+  width: 100%;
+  cursor: pointer;
+  padding: 20px;
+  border-left: .4px solid rgba(0,0,0,.5);
+ }
+ 
+.content-quran-wrap div .settings{
+  width: 100%;
+  height: 0;
+  display: flex;
+  overflow: hidden;
+  transition: .3s;
+  justify-content: center;
+  align-items: center;
+  border-bottom: .4px solid rgba(0,0,0,.5);
+}
+.settings button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+ /* show setting bar */
+.content-quran-wrap div .show-setting{
+   height: 45px;
+ }
+.content-quran-wrap div .settings li{
+  list-style: none;
+  margin: 0 3px;
+}
+.content-quran ul .ayat .content-quran-wrap .nomor{
+  text-align: center;
+}
+
+
+.text-bars{
+  font-size: .8em;
+  padding: 10px;
+  transition: .5s;
+}
+.scale-bar{
+  font-size: .8em;
+  transform: scale(0);
+}
+.arab{
+  font-family: 'amiri','serif';
+  text-align: right;
+  font-size: 1.7em;
+  font-weight: 250;
+  padding: 10px ;
+}
+.hide-bar{
+  display: none;
+}
+
+
+.toggler-overlay{
+  position: fixed;
+  opacity: 1;
+  top: 70%;
+  left: 3%;
+  transition: .3s;
+  font-size: 40px;
+}
+
+.overlay-setting{
+  position: fixed;
+  top: 65%;
+  left: 16%;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  padding: 0;
+  border-radius: 5px;
+  width: 45%;
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+.show-overlay-setting{
+  padding: 12px;
+  height: 200px;
+}
+.overlay-setting > div{
+  margin: 10px 0;
+}
+.overlay-setting .toggle-switch{
+  display: flex;
+  justify-content: space-between;
+}
+.toggle-switch .toggle-switch-btn{
+  -webkit-appearance: none;
+  height: 15px;
+  width: 30px;
+  background: #f2f1f3;
+  border-radius: 30px;
+  outline: none;
+  position: relative;
+}
+.toggle-switch .toggle-switch-btn:before{
+  content: "";
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transform: scale(1.3);
+  transition: .3s;
+}
+.toggle-switch .toggle-switch-btn:checked::before{
+  margin-left: 15px
+}
+.input-range .range{
+  -webkit-appearance: none ;
+  height: 4px;
+  border-radius: 25px;
+}
+.range::-webkit-slider-thumb{
+			-webkit-appearance: none;
+			height: 20px;
+			width: 20px;
+			background: #333;
+			border-radius: 50%;
+ 
+}
+
+
+
+
+/* bookmark style */
+.bookmarks-container{
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 999;
+  background: #202020;
+  color: rgba(255,255,255,.7);
+  transition: .7s;
+  transform: translate(-100%);
+}
+.show-bookmarks-container{
+  transform: translatey(0);
+}
+
+.bookmarks-container h2{
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.3em;
+}
+.bookmarks-container hr {
+  width: 90%;
+  border: none;
+  background: rgba(255,255,255,.7);
+  height: 3px;
+  margin: 20px auto;
+}
+.bookmarks-container ul{
+  overflow-y: scroll;
+}
+.bookmarks-container ul li{
+  margin: 10px 0;
+}
+.bookmarks-container ul li > .bookmarks-toggler{
+   width: 80%;
+   height: 35px;
+   border: none;
+   margin: auto;
+   display: block;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 12px;
+}
+.bookmarks-toggler remove-bookmark{
+  padding: 5px;
+  border: none;
+}
+ .bookmarks-content{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  height: 0;
+ }
+ .show-bookmark-content{
+   height: auto;
+ }
+ 
+ 
+.btn-disable{
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgba(0,0,0,.5);
+  
+}
+
+
+
+
+.container .audio-wrap{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  opacity: 0;
+}

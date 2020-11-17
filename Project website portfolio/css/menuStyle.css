@@ -1,0 +1,86 @@
+*{
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+	list-style: none;
+}
+
+body{
+	font-family: sans-serif;
+	background: url("../backgroundPict/Polygon.jpg");
+}
+
+
+.container nav{
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 60px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: #202020;
+	transition: .5s;
+}
+.container nav a{
+	color: #fff;
+}
+nav > .logo a{
+	text-decoration: none;
+	font-size: 1.3em;
+}
+nav > ul{
+	display: flex;
+	width: 40%;
+	justify-content: space-between;
+	list-style: none;
+}
+
+
+nav > ul li a{
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+nav .hamburger{
+	position: relative;
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 35px;
+	width: 35px;
+}	
+nav .hamburger input{
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	-webkit-appearance: none;
+	outline: none;
+}
+
+nav .hamburger span{
+	display: block;
+	height: 2px; width: 100%;
+	background: #fff;
+	transition: .5s;
+}
+
+nav .hamburger span:nth-child(2){
+	transform-origin: 0 0;
+}
+nav .hamburger span:nth-child(4){
+	transform-origin: 0 0;
+}
+
+nav .hamburger .toggler:checked ~ span:nth-child(2){
+	transform: rotate(45deg);
+}
+nav .hamburger .toggler:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate(-2px,0);
+}
+nav .hamburger .toggler:checked ~ span:nth-child(3){
+	transform: scale(0);
+}

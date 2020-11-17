@@ -1,0 +1,78 @@
+.container .about{
+	width: 100%;
+	background: #202020;
+	color: rgba(255,255,255,.5);
+	padding: 15px 24px;
+}
+.container .about .description{
+	height: 430px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.about .description h2{
+	font-size: 3em;
+	font-weight: 700;	
+}
+.description hr{
+	width: 40%;
+	border: none;
+	background: rgba(255,255,255,1);
+	height: 3px;
+	margin: 20px 0;	
+}
+.about p{
+	font-size: 1.3em;
+	line-height: 30px;
+}
+
+.hobby h2{
+	text-align: right;
+	font-size: 3em;
+	font-weight: 700;	
+}
+.hobby hr{
+	width: 40%;
+	border: none;
+	background: rgba(255,255,255,1);
+	height: 3px;
+	margin: 25px 0 25px auto;
+}
+.hobby ul li:nth-child(even){
+	color: rgba(0,0,0,.5);
+	height: 340px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background: url("../path/7.jpg") no-repeat right;
+	background-color: #202020;
+	background-size: 50% 100%;
+	margin-bottom: 35px;
+}
+.hobby ul li:nth-child(1),.hobby ul li:nth-child(3){
+	color: rgba(0,0,0,.5);
+	height: 340px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background: url("../path/18.jpg") no-repeat;
+	background-color: #202020;
+	background-size: 50% 100%;
+	margin-bottom: 35px;
+	
+}
+
+.hobby ul li:nth-child(even) div{
+	margin-left: 30px;
+}
+.hobby ul li .hobbyText{
+	background: rgba(255,255,255,1);
+	margin-right: 30px;
+	width: 50%;
+	padding: 30px;	
+}
+.hobby ul div h4{
+	font-size: 2em;
+	font-weight: 690;
+	margin-bottom: 10px;
+}

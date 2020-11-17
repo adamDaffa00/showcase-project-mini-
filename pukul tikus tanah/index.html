@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/play-style.css">
+  <title> weak a mole </title>
+</head>
+<body>
+  
+  <h1> pukul tikus tanah</h1>
+  <div class="time-wrapper"> 
+    <div>
+      <p> waktu main </p>
+      <select name="time" id="timeout">
+        <option value="10"> 10 detik </option>
+        <option value="20"> 20 detik </option>
+        <option value="30"> 30 detik </option>
+        <option value="40"> 40 detik </option>
+        <option value="50"> 50 detik </option>
+        <option value="60"> 60 detik </option>
+      </select>
+    </div>
+    <div>
+      <p> kecepatan tikus </p>
+      <select name="time" id="kec-tikus">
+        <option value="1200,1500"> batu </option>
+        <option value="800,1300"> keong </option>
+        <option value="500,1000"> babi hutan </option>
+        <option value="400,800"> kuda </option>
+        <option value="200,400"> cheetah </option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" onclick="play()" class="play"> play <i class="fas fa-play"> </i></button>
+  <div class="count-down">
+    <h2> 0 </h2>
+  </div>
+  <div class="container">
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+    <div class="tanah">
+      <div class="tikus">
+      </div>
+    </div>
+  </div>
+  <div class="score">
+    <h3> skor kamu </h3>
+    <h2> 0 </h2>
+  </div>
+  <audio src="audio/punch.mp3" class="audio"></audio>
+  <script src="script/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

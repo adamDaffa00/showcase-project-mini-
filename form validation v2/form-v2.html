@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+  <title> form validation v1 </title>
+  <style type="text/css" media="all">
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    font-size: 15px;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    background: purple;
+  }
+  .form-box{
+    background: #fff;
+  }
+  .form-box h2{
+    padding: 1.3rem;
+    width: 100%;
+    background: rgba(0,0,0,.05);
+  }
+  form{
+    width: 40vw;
+    padding: 0 2rem 1.5rem 2rem;
+  }
+  .form-box form > div{
+    height: 4.5rem;
+    margin: 6px 0;
+  }
+  .form-box form label{
+    font-size: .8;
+  }
+  form > div div{
+    display: flex;
+    align-items: center;
+  }
+  div .icon-true{
+    font-size: 10px;
+    color: green;
+    transform: translatex(-18px);
+  }
+  div .icon-false{
+    font-size: 10px;
+    color: red;
+    transform: translatex(-18px);
+  }
+  form div input {
+    width: 100%;
+    height: 30px;
+    border: .7px solid black;
+    border-radius: 8px;
+    padding: 7px;
+    margin: 2px;
+  }
+  button{
+    display: block;
+    height: 35px;
+    width: 80%;
+    margin: 1rem auto;
+    border: none;
+    background: purple;
+    color: #fff;
+    border-radius: 8px;
+    
+  }
+  .error{
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <div class="form-box">
+     <h2> create account </h2>
+     <form id="form" action="/" method="GET">
+      <div>
+        <label for="username"> username </label>
+        <div>
+          <input type="text" name="username" id="username" placeholder="username">
+          <i class="fas icon-true"> </i>
+        </div>
+        <p class="error"> </p>
+      </div>
+      <div>
+        <label for="email"> email </label>
+        <div>
+          <input type="email" name="email" id="email" placeholder="email" >
+          <i class="fas icon-true"> </i>
+        </div>
+        <p class="error"> </p>
+      </div>
+      <div>
+        <label for="password"> password </label>
+        <div>
+          <input type="password" name=password id=password placeholder="password" >
+          <i class="fas icon-true"> </i>
+        </div>
+        <p class="error"> </p>
+      </div>
+      <div>
+        <label for="password2"> confirm password </label>
+        <div>
+          <input type="password" name=password id="password2" placeholder="confirm password" >
+          <i class="fas icon-true"> </i>
+        </div>
+        <p class="error"> </p>
+      </div>
+      <button type="submit"> submit </button>
+    </form>
+   </div>
+  </div>
+  
+  <script src="script.js" type="text/javascript" charset="utf-8">
+  </script>
+</body>
+</html>

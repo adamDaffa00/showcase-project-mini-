@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 20px;
+}
+h1{
+  font-size: 4rem;
+  text-align: center;
+  margin: 1em 0 1.3em 0;
+}
+.time-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 95%;
+  margin: auto;
+}
+.time-wrapper > div{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 2rem;
+  margin: 5px 0;
+}
+.time-wrapper > div p{
+  margin: 0 .2rem;
+}
+.time-wrapper > div select{
+  height: 90%;
+  margin: 0 .5rem;
+  border: 2px solid black;
+  background: #fff;
+  padding: 0 8px;
+}
+
+
+
+.play{
+  margin: 2rem auto;
+  display: block;
+  padding: .5rem 2rem;
+  font-size: 1.2em;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+
+.count-down{
+  text-align: right;
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.container {
+  width: 95%;
+  padding: 1em;
+  border: 5px solid black;
+  border-radius: 3%;
+  display: grid;
+  grid-template: repeat(3,250px) / repeat(3,1fr);
+  row-gap: 2em;
+  cursor: url('../img/kepalan.png'), auto;
+  margin: auto;
+}
+.container:active{
+  cursor: url('../img/kepalan1.png'), auto;
+}
+.tanah{
+  position: relative;
+  /*display: flex;
+  align-items: center;
+  justify-content: center;*/
+  overflow: hidden;
+  
+}
+.tanah:after{
+  content: '';
+  background: url('../img/tanah.png') no-repeat center center/cover;
+  position: absolute;
+  height: 60%;
+  width: 100%;
+  bottom: -20%;
+}
+.tanah .tikus{
+ /* position: absolute;
+  top: 0;*/
+  background: url('../img/tikus.png') no-repeat center center/cover;
+  transform: translatey(100%);
+  transition: .5s;
+  height: 100%;
+  width: 100%;
+}
+.tanah .muncul {
+  transform: translatey(0);
+}
+
+
+.score{
+  text-align: center;
+  margin-top: 3rem;
+
+}
+.score h2{
+ font-size: 3rem;
+}

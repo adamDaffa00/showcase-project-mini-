@@ -1,0 +1,37 @@
+.showcase{
+	height: 550px;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;	
+}
+.showcase .content h1{
+	font-size: 2.5em;
+	font-weight: 550;
+}
+.showcase .content p{
+	font-size: 1.4em;
+	font-weight: 450;
+	margin: 14px 0 28px 0;
+}
+.showcase .content a{
+	padding: 15px;
+	background: #eee;
+	text-decoration: none;
+	font-size: 1.2em;
+	color: #000;
+}
+.showcase .content,.showcase .pictGroup{
+	width: 40%;
+}
+.showcase .pictGroup{
+	display: grid;
+	gap: 5px;
+	grid-template: 110px 1fr / 1fr 1fr;
+}
+.showcase .pictGroup li.item3{
+	grid-column: 1 / 3;
+}
+

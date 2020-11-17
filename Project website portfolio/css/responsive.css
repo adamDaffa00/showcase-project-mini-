@@ -1,0 +1,229 @@
+/* tablet device */
+@media screen and (max-width: 760px){
+	/* navbar */
+	.container > nav  ul{
+		width: 60%;
+	}
+	/* about */
+	.container .about .description{
+		height: 100vh;
+	}
+	.container .about .hobby ul li{
+		height: 80vh;
+	  margin: 15px 0;
+	}
+	.hobby ul li .hobbyText{
+		background: rgba(255,255,255,.8);
+	}
+	
+	.hobby ul li:nth-child(even){
+		background: url("../path/7.jpg") no-repeat;
+		background-size: cover;
+	}
+	.hobby ul li:nth-child(1),.hobby ul li:nth-child(3){
+		background: url("../path/18.jpg") no-repeat center;
+		background-size: cover;
+	}	
+	.hobby ul li .hobbyText,.hobby ul li:nth-child(even) .hobbyText{
+		width: 98%;
+		margin: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+/* mobile device */
+@media screen and (max-width: 576px){	
+	nav .hamburger{
+		display: flex;
+		cursor: pointer;
+	}
+	
+	nav >  ul{
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: calc(100vh + 60px);
+		width: 60%;
+		background: #202020;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: -1;
+		transform: translateX(100%);
+		transition: transform .4s;
+	}
+	nav ul.slide{
+		transform: translate(0);
+	}
+	nav > ul li{
+		margin: 10px 0;
+		opacity: 0;
+		transition: .9s;
+	}
+	nav > ul li.refeal{
+		margin: 0 0;
+		opacity: 1;
+	
+	}
+	nav > ul li a{
+		font-size: 2.3em;	
+	}
+	
+	
+	
+	
+	
+	/* header */
+	.showcase .content{
+		height: 80vh;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding: 0 24px;		
+	}
+	
+	
+	.showcase .pictGroup{
+		display: none;
+	}
+	
+	
+	
+	
+	/* about */
+	.container .about{
+		padding: 0;
+	}
+	.about .description h2,.about .hobby h2{
+		font-size: 4em;
+	}
+	.container .about .description{
+		height: 90vh;
+	}
+	.container .about .hobby{
+		padding: 20px 0;
+	}
+	.hobby ul li .hobbyText,.hobby ul li:nth-child(even) .hobbyText{
+		width: 100%;
+		margin: auto;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.container .about .hobby ul li{
+		height: 60vh;
+	  margin: 0;
+	  padding: 0;
+		background: none;
+		
+	}
+	.hobby .hobbyText{
+		padding: 0;
+		margin: 0;
+	}
+	
+	/* galery */
+	.gallery{
+		padding: 0;
+	}
+	.gallery h2{
+		font-size: 4em;
+	}
+	.gallery ul{
+		width: 80%;
+		height: 90vh;
+		overflow: scroll;
+		grid-template-columns: 1fr;
+		margin: auto;
+	}
+	.gallery ul li{
+		grid-column: 1/6;
+	}
+	
+	/* service */
+	.ourServices{
+		padding: 5em 0;
+	}
+	.ourServices .service{
+		grid-template-columns: repeat(1,1fr);
+		width: 100%;
+	}
+	.service > div .serviceContent{
+	  padding: 10px;
+	}
+	.ourServices h2{
+		font-size: 4em;
+		text-align: right;
+	}
+	.ourServices hr{
+		margin-left: auto;
+	}	
+	.ourServices .service > div .wrapIcon{
+		display: none;
+	}
+	.ourServices .service > div .serviceContent{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: rgba(0,0,0,.5);
+		color: #fff;
+		width: 100%;
+		height: 60vh;
+		margin-bottom: 5px;
+	}
+	.ourServices .service > div .serviceContent h4{
+		font-size: 2.5em;
+	}
+	.ourServices .service > div .serviceContent p{
+		font-size: 1.4em;
+	}
+	
+	/* teams */
+  .Teams .myTeams > li{
+    height: 400px;
+    background-position-y: center;
+    background-size: 150% 150%;
+    margin: 0;
+    padding: 0;
+  }
+  .Teams .myTeams > li > div .miniGallery{
+    display: none;
+  }
+  .Teams .myTeams > li > div{
+    background:rgba(22,29,32,0.619);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .myTeams > li > div .team h3{
+    font-size: 2.2em;
+    font-weight: 600;
+    color: rgba(255,255,255,.7);
+  }
+  .info .textWrap{
+    width: 100%;
+    color: rgba(255,255,255,.7);
+  }
+  .textWrap h4{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .info .textwrap p{
+    font-size: .9em;
+  }
+  .info .socialBar{
+    width: 100%;
+  }
+  .info .socialBar h4{
+    font-size: 1.8em;
+    font-weight: 600;
+    color: rgba(255,255,255,.7);
+    margin: 12px 0;
+  }
+
+ }

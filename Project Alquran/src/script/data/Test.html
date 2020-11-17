@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title> test </title>
+    <style type="text/css" media="all">
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="music">
+    <audio controls>
+      <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/289.ogg" type="audio/ogg">
+      <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/289.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>  
+    </div>
+    <script type="text/javascript" charset="utf-8">
+     /**
+ function getDataMurid(url,success,error){
+   let xhr = new XMLHttpRequest();
+   xhr.onreadystatechange = function (){
+     if (xhr.readyState == 4) {
+       if (xhr.status == 200) {
+         success(xhr.response);
+       }else if (xhr.status == 404) {
+         error();
+       }
+     }
+   };
+   
+   xhr.open("get",url);
+   xhr.send();
+ }
+
+ getDataMurid("surat/2.json", result => {
+   let data = JSON.parse(result);
+   getmusic(data)
+     
+ },(e) => {
+   console.log("error");
+ });
+ 
+ function getmusic(){
+   const musicWrap = document.queryselector(".music")
+   let s = '';
+   
+ }
+ 
+ 
+ function displayMusic(url){
+   let el = `
+    <audio controls>
+      <source src="${url}.ogg" type="audio/ogg">
+      <source src="${url}.mp3" type="audio/mpeg">
+      Your browser does not support the audio tag.
+    </audio>  `
+   return el
+ }**/
+    </script>
+  </body>
+</html>

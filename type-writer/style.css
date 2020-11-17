@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap');
+body{
+  font-family: 'Raleway',Sans-Serif;
+  height: 100vh;
+  background: #333 url('img/sunset.jpg') no-repeat center center / cover;
+  color: #fff;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 3rem;
+  flex-direction: column;
+}
+h1,h2{
+  font-weight: 200;
+  margin: .4rem;
+}
+h1{
+  font-size: 4.5rem;
+}
+h2{
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.txt-type .txt{
+  border-right: 1px solid #fff;
+}
+
+@media screen and (max-width: 576px){
+  h1{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+}
