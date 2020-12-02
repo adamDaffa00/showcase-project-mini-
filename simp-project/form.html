@@ -4,21 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   <title> ❤️ </title>
 </head>
 <body>
   <div class="container">
-    <div class="theme-bar"></div>
+    <div class="theme-bar">
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
     <div class="modal-form">
       <form action="/" method="GET">
         <div class="form-bar"></div>
-        <label for="nama"> masukan nama </label>
-        <input type="text" name="nama" id="nama" />
-        <label for="jk"> jenis kelamin </label>
-        <input type="radio" name="perempuan" value="perempuan" id="jk" /> 
-        <input type="radio" name="laki-laki" value="laki-laki" id="jk"/>
+        <input type="text" name="nama" id="nama" placeholder="masukan nama" />
+        <div class="gender-choice">
+          <p> jenis kelamin </p>
+          <input type="radio" name="gender" class="gender-option" id="laki-laki"/> <label for="laki-laki"> laki-laki </label>
+          <input type="radio" class="gender-option" name="gender" id="perempuan"/> <label for="perempuan"> perempuan </label>
+        </div>
+        <button type="submit"> submit </button>
       </form>
     </div>
   </div>
+  <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

@@ -16,8 +16,28 @@ body{
 }
 #time{
   font-size: 8rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,.7);
 }
 h1{
   font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,.7);
   margin-bottom: 3rem;
+}
+h2{
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0,0,0,.7);
+}
+@media screen and (max-width: 576px){
+  #time{
+   font-size: 4rem;
+  }
+  h1{
+   font-size: 1.8rem;
+  }
+  h2{
+       font-size: 1.3rem;
+  }
+  
 }
