@@ -44,9 +44,10 @@ class Typewriter {
 document.addEventListener('DOMContentLoaded',init);
 function init(){
   const textElement = document.querySelector('.txt-type');
-  const words = JSON.parse(textElement.getAttribute('data-text'));
-  const wait = textElement.getAttribute('data-wait');
+  // const words = JSON.parse(textElement.getAttribute('data-text'));
   
-  let start = new Typewriter(textElement,words,wait);
+  const wait = textElement.getAttribute('data-wait');
+  const arrText = ["programmer","web designer","video editor"];
+  let start = new Typewriter(textElement,arrText,wait);
   start.type()
 }

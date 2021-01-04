@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css" media="all">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #1f344b;
+      overflow: hidden;
+    }
+    .content {
+      position: absolute;
+      z-index: 99;
+      transition: 1s;
+      /*background: #6c74e1;*/
+      backdrop-filter: blur(4px);
+      padding: 2rem;
+      background: rgba(255,255,255,.1);
+      /*border: 3px solid #f1f1f2;*/
+      animation: glasses 10s infinite alternate;
+    }
+    @keyframes glasses {
+      from {
+        background: rgba(255,255,255,.1);
+        backdrop-filter: blur(4px);       
+      }
+      to{
+        background: rgba(255,255,255,.6);
+        backdrop-filter: blur(0px);
+      }
+    }
+    .container .content * {
+      font-weight: 900;
+      color: rgba(255,255,255,.8);
+    }
+    .content h1{
+      font-size: 4.8rem;
+      white-space: nowrap;
+    }
+    .content h1 .t{
+      content: 'hari';
+      padding: .3rem;
+      font-size: .658rem;
+      color: white;
+      font-weight: 300;
+      background-color: #6c74e1;
+
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      white-space: nowrap;
+    }
+    .content h3 {
+      font-size: 3rem;
+      margin: 1rem 0;
+      position: relative;
+      white-space: nowrap;
+    }
+    .content h3:before, .content h3:after{
+      content: '';
+      width: 30%;
+      height: 5px;
+      background: #fec331;
+      display: block;
+      position: absolute;
+    }
+    .content h3:before{
+      top: 50%;
+      left: 0%;
+     }
+    .content h3:after{
+      top: 50%;
+      right: 0%;
+     }
+     .content h2{
+       margin-top: 2.6rem;
+     }
+    .content .future {
+      color: #fc5b19;
+      font-weight: 100;
+      font-size: 4.5rem;
+      padding: .8rem;
+      position: relative;
+    }
+    
+    
+    .bubbles {
+      width: 100%;
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .bubble {
+      opacity: 0;
+      background: #fc5b18;
+      border-radius: 50%;
+      transform: translatey(50vh) scale(0) ; 
+    }
+    .big-bubble{
+      height: 120px;
+      width: 120px;
+      animation: animate 5s infinite linear;
+    }
+    .biggest-bubble{
+      height: 290px;
+      width: 290px;
+      animation: animate 6s infinite linear;
+      background-color: #fec331;
+    }
+    .small-bubble{
+      height: 10px;
+      width: 10px;
+      animation: animate 4s infinite linear;
+    }
+    .smallest-bubble{
+      height: 5px;
+      width: 5px;
+      animation: animate 1.7s infinite linear;
+      background-color: #6c74e1;
+    }
+    .medium-bubble{
+      height: 70px;
+      width: 70px;
+      animation: animate 3.6s infinite linear;
+      background-color: #6c74e1;
+    }
+    .normal-bubble{
+      height: 40px;
+      width: 40px;
+      background-color: #fff;
+      animation: animate 4.4s infinite linear;
+    }
+    
+  
+    
+    @keyframes animate {
+      0%{
+       opacity: 0;
+       transform: translatey(50vh) scale(0) ;
+      }
+      100%{
+       opacity: 1;
+       transform: translatey(-100vh) scale(1) ;   
+      }
+    }
+    @media screen and (max-width: 768px){
+    .content{
+      padding: 3rem 1rem;
+    }
+    .content h1{
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    .content h3{
+      font-size: 1.5rem;
+      white-space: nowrap;
+    }
+    }
+  </style>
+  <title>countdown 2021</title>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>
+         <span class="hari"></span>
+         <span class="t">hari</span>
+         :
+         <span class="jam"></span>
+         <span class="t">jam</span>
+         :
+         <span class="menit"></span>
+         <span class="t">menit</span>
+         :
+         <span class="detik"></span>
+         <span class="t">detik</span>
+      </h1>
+      <h3> menuju </h3>
+      <h2> <span class="future"> 2101🔥</span></h2>
+    </div>
+    
+    <div class="bubbles">
+      <div class="bubble big-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble biggest-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble big-bubble"></div>
+
+      <div class="bubble big-bubble"></div>
+      <div class="bubble medium-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble small-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble smallest-bubble"></div>
+      <div class="bubble big-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble biggest-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble big-bubble"></div>
+      <div class="bubble small-bubble"></div>
+      <div class="bubble smallest-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble big-bubble"></div>
+
+      <div class="bubble big-bubble"></div>
+      <div class="bubble medium-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble biggest-bubble"></div>
+
+      <div class="bubble small-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+      <div class="bubble normal-bubble"></div>
+    </div>
+  </div>
+  <script type="text/javascript" charset="utf-8">
+    
+
+	let countdown = setInterval(function(){
+	  const abadDepan = new Date("January 1, 2101 00:00:00").getTime();
+
+		const sekarang = new Date().getTime();
+		
+		const selisih = abadDepan - sekarang;
+		
+		const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+		
+		const jam = Math.floor(selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+		
+		const menit = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60));
+		
+		const detik = Math.floor(selisih % (1000 * 60) / 1000);
+
+    // text elements
+    
+    const day = document.querySelector('.hari')
+    day.innerHTML = hari
+    const hour = document.querySelector('.jam')
+    hour.innerHTML = jam;
+    const minutes = document.querySelector('.menit')
+    minutes.innerHTML = menit;
+    const second = document.querySelector('.detik')
+    second.innerHTML = detik;
+ 
+  
+	},1000) 
+	  
+  </script>
+</body>
+</html>
