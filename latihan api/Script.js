@@ -99,14 +99,14 @@ $.ajax({
 // refactoring 
 // search button
 
-const search = document.querySelector('input[type="text"]');
+const search = document.querySelector('.search-button');
 
- search.addEventListener('input', async function (e){
+ search.addEventListener('click', async function (e){
    try {
-       const value = e.data.toLowerCase()
+       const value = document.querySelector('.input-keywords').value
        const displayMovies = await inputMovies(value);
-       console.log(value)
-       //displayUI(displayMovies)
+      
+       displayUI(displayMovies)
     } catch (e) {
        alert(e)
     }
@@ -114,7 +114,8 @@ const search = document.querySelector('input[type="text"]');
  
  // error yang di tangkap oleh fetch adalah error yabg terjadi pada network nya atau url nya, jika error saat user meisikan film yang tidak ada atau user tidak memasukan input maka itu error dari browser
 function inputMovies(input){
-  return fetch('http://www.omdbapi.com/?apikey=a8dfe2e0&s=' + input).then(response => {
+  return fetch('http://www.omdbapi.com/?apikey=a8dfe2e0&s=' + input)
+  .then(response => {
    if (!response.ok) {
     throw new Error(response.statusText)
     //console.log(response)
@@ -133,7 +134,7 @@ function inputMovies(input){
 
 function displayUI(movies){
     let cards = '';
-    movies.forEach(movies => cards += showCards(movies));
+    movies.forEach(movie => cards += showCards(movie));
     const cardBody = document.querySelector(".parent");
     cardBody.innerHTML = cards;
     return cards;
@@ -185,7 +186,7 @@ function showCards(film){
               <h5 class="card-title"> ${film.Title}</h5>
               <h6 class="card-subtitle mb-2 text-muted">${film.Year}</h6>
               
-              <a href="#" class="btn btn-primary modal-detail-button" data-toggle="modal" data-target="#showDetail" data-idfilm="${film.imdbID}"> view details  </a>
+              <button href="#" class="btn btn-primary modal-detail-button" data-toggle="modal" data-target="#showDetail" data-idfilm="${film.imdbID}"> view details  </button>
               
             </div>
             

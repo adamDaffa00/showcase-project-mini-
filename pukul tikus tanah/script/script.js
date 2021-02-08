@@ -55,10 +55,10 @@ function munculkanTikus(){
 
 function timeout(){
   switch (this.value) {
-    case '10':
+     case '10':
       timeOut = 10;
       break;
-    case '20':
+     case '20':
       timeOut = 20;
       break;
      case '30':

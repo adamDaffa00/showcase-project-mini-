@@ -6,6 +6,42 @@
 html{
   --cell-size: 100px;
 }
+body {
+  background: #202020;
+  overflow: hidden;
+  color: #fff;
+}
+
+.score-board {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  transform: translatex(-50%);
+  background: #f1f1f3;
+  color: #202020;
+  padding: 1rem;
+}
+.score-board h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.score-board .number-score {
+  display: flex;
+  flex-direction: column;
+}
+.number-score p {
+  margin: 0 15px;
+  margin: .4rem 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.score-board span {
+  color: #202020;
+}
+
+
 .board{
   display: grid;
   justify-items: center;
@@ -19,7 +55,11 @@ html{
 .cell{
   height: var(--cell-size);
   width: var(--cell-size);
-  border: 1px solid black;
+  border: 1px solid #fff;
+  display: flex;
+  font-size: 5rem;
+  justify-content: center;
+  align-items: center;
 }
 .cell:first-child,.cell:nth-child(2),.cell:nth-child(3){
   border-top: none;
@@ -38,12 +78,12 @@ html{
   position: absolute;
   display: block;
   width: 200px;
-  top: 120px;
+  top: 50%;
   background-color: rgba(205,133,63,.8);
   color: #fff;
   font-size: 2rem;
   left: 50%;
-  transform: translatex(-50%);
+  transform: translate(-50%,-50%);
   padding: 50px 0;
   border-radius: 5px;
   text-align: center;
@@ -54,6 +94,25 @@ html{
 
 
 
+
+
+.notif {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  margin: 15px auto;
+  border: 1px solid red;
+  transition: .2s;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  transform: translatey(-150%);
+}
+.display {
+  transform: translatey(0);
+}
 .main-menu{
   position: fixed;
   top: 30%;
@@ -61,20 +120,21 @@ html{
   transform: translatex(-50%);
   padding: .7rem;
   z-index: 99;
-  border: 1px solid #000;
+  border-radius: 10px;
+  border: 1px solid #fff;
 }
-.main-menu #nama{
+.main-menu #input-nama{
   width: 60vw;
+  border-radius: 10px;
   display: block;
   padding: .5rem .7rem;
   border: none;
-  border-bottom: .7px solid black;
+  border-bottom: .7px solid #fff;
 }
 .main-menu > div{
   display: flex;
   margin:  .9rem 0;
-  
- align-items: center;
+  align-items: center;
 }
 .main-menu > div p {
   margin-right: 10px;
@@ -84,15 +144,41 @@ html{
   padding: .5rem;
   background: none;
   flex: 1;
-  border: 1px solid #000;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
 }
 .btn{
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #fff;
   padding: .5rem;
-  border: 1px solid black;
-  background: none;
+  border: 1px solid #fff;
+  background: #000;
   margin: .5rem 0;
   width: 100%;
+  border-radius: 10px;
+}
+
+.btn#play-btn{
+  position: absolute;
+  bottom: 0;
+}
+.hide {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .score-board {
+    width: 90%;
+  }
+  .score-board h1{
+    font-size: 2rem;
+  }
+  .number-score p {
+    margin: 0 15px;
+    margin: .4rem 0;
+    font-size: 1rem;
+    font-weight: 200;
+  }
 }

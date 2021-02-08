@@ -1,6 +1,8 @@
 let origBoard;
-const hugPlayer = 'O';
-const AIPlayer = 'X';
+let yourScore = 0;
+let AiScore = 0;
+const hugPlayer = localStorage.getItem('player');
+const AIPlayer = 'O';
 let winCombos = [
   [0,1,2],
   [3,4,5],
@@ -15,6 +17,7 @@ let winCombos = [
 const cells = document.querySelectorAll('.cell');
 startGame();
 function startGame() {
+  document.querySelector('#play-btn').classList.add('hide');
   document.querySelector('.endGame').style.display = 'none';
   origBoard = Array.from(Array(9).keys());
   cells.forEach(cell => {
@@ -54,13 +57,28 @@ function gameOver(gameWon){
   cells.forEach(cell => {
     cell.removeEventListener('click',turnClick,false);
   });
-  declareWinner(gameWon.player == hugPlayer ? 'you win' : 'you lose');
+  declareWinner(gameWon.player == hugPlayer ? 'kamu menang' : 'kamu kalah');
 }
 
 function declareWinner(who){
+  if (who == 'kamu kalah') {
+    yourScore = yourScore;
+    AiScore++;
+  } else if(who == 'kamu menang'){
+    yourScore++;
+    AiScore = AiScore;
+  }else {
+    yourScore = yourScore;
+    AiScore = AiScore;
+  }
   document.querySelector('.endGame').style.display='block';
   document.querySelector('.endGame .text').innerText = who;
+  document.querySelector('#play-btn').classList.remove('hide');
+  document.querySelector('#HuScore').innerText = yourScore;
+  document.querySelector('#AiScore').innerText = AiScore;
+  
 }
+
 function emptySquares(){
   return origBoard.filter(s => typeof  s == 'number');
 }
@@ -74,7 +92,7 @@ function checkTie(){
       cell.style.backgroundColor = 'green';
       cell.removeEventListener('click',turnClick,false);
     });
-    declareWinner('Tie game');
+    declareWinner('seri');
     return true;
   }
   return false;

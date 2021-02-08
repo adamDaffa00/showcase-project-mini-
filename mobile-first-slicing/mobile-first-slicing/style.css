@@ -1,0 +1,109 @@
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+h2 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+img {
+  display: block;
+  width: 100%;
+}
+main {
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 30px 0 40px rgba(0,0,0,.1),-30px 0 40px rgba(0,0,0,.1) 
+}
+#landing {
+  background: #fff;
+}
+
+#landing-text {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 40vw ;
+  text-align: center;
+  /*padding: 0 1rem;*/
+}
+#landing-image {
+  background: url('img/malam.jpg') no-repeat center center/cover;
+  height: 50vh;
+  margin: 0;
+  flex: 0 1 60vw;
+}
+#landing-text  h2 {
+  color: #888;
+}
+
+.btn {
+  padding: .5rem 2rem;
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #333;
+  transition: background .5s ease-in;
+}
+
+.btn:hover {
+  background: #f4f4f4;
+}
+#header {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1.5rem;
+}
+#header h2 {
+  border-left: dotted 1px #fff;
+  border-right: dotted 1px #fff;
+  display: inline-block;
+  padding:  0 1rem;
+}
+
+.caption {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  color: #333;
+}
+
+footer h3 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+
+
+@media screen and (min-width: 500px){
+  #landing {
+    display: flex;
+    height: 100%;
+  }
+  #landing-text {
+    height: 100vh;
+  }
+  #landing-image {
+    height: 100vh;
+  }
+}
+
+
+@media screen and (min-width: 700px){
+  .btn {
+    padding: 1rem;
+  }
+}

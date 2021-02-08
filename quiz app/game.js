@@ -24,23 +24,20 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
     })
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map(loadedQuestion => {
-          console.log(loadedQuestion)
           let formatedQuestion = {
             question : loadedQuestion.question
-          } 
-          console.log(formatedQuestion)
-          let answerChoices = [...loadedQuestion.incorrect_answers]
+          };
+          let answerChoices = [...loadedQuestion.incorrect_answers];
                   
           formatedQuestion.answer = Math.floor(Math.random() * 3) + 1;
         
-          answerChoices.splice(formatedQuestion.answer - 1,0,loadedQuestion.correct_answer)
-          
+          answerChoices.splice(formatedQuestion.answer - 1,0,loadedQuestion.correct_answer);
           answerChoices.forEach((choice,index) => {
-            formatedQuestion["choice" + (index + 1)] = choice
-          })
+            formatedQuestion["choice" + (index + 1)] = choice;
+          });
           
-          return formatedQuestion
-        })
+          return formatedQuestion;
+        });
         startGame(); 
     })
     .catch((err) => {
@@ -65,16 +62,16 @@ startGame = () => {
   // scrol diisi 0
   score = 0;
   // array soal
-  availableQuestion = [...questions]
+  availableQuestion = [...questions];
   // memanggil fungsi getNewQuestion untuk mengupdate soal baru
-  getNewQuestion()
-  gameContainer.classList.remove("hidden")
+  getNewQuestion();
+  gameContainer.classList.remove("hidden");
   loader.classList.add("hidden");
- }
+ };
 
 // fungsi untuk mendapatkan soal baru
 getNewQuestion = () => {
-  localStorage.setItem("mostRecentScore",score)
+  localStorage.setItem("mostRecentScore",score);
   // cek apakah soal bekum tersedia atau soal sudah dijawab semua
   if (availableQuestion.length === 0 || questionCounter >= MAX_QUESTION) {
     // mendirect ke halaman end html
@@ -88,13 +85,13 @@ getNewQuestion = () => {
   progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`
 
    // variable angka random digunakan untuk mengacaj index soal
-  const questionIndex = Math.floor(Math.random() * availableQuestion.length)
+  const questionIndex = Math.floor(Math.random() * availableQuestion.length);
   
   // variabel objek ini berisi soal yang sekarang sedang dikerjakan
-  currentQuestion = availableQuestion[questionIndex]
+  currentQuestion = availableQuestion[questionIndex];
   
   // soal tersebut ditampilkan dalam tag HTML
-  questionEl.innerHTML = currentQuestion.question
+  questionEl.innerHTML = currentQuestion.question;
   
  // menampilkan data pilihan Jawaban ke element html
   choices.forEach(choice => {

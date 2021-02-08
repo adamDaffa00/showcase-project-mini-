@@ -8,6 +8,13 @@
   <title> tic tac toe </title>
 </head>
 <body>
+  <div class="score-board">
+    <h1> skor </h1>
+    <div class="number-score">
+      <p> skor kamu : <span id="HuScore"> 0 </span></p>
+      <p> skor AI : <span id="AiScore"> 0 </span></p>
+    </div>
+  </div>
   <div class="board" id="board">
     <div class="cell" data-cell="0"></div>
     <div class="cell" data-cell="1"></div>
@@ -22,19 +29,8 @@
   <div class="endGame">
     <div class="text"></div>
   </div>
-  <!--
-  <div class="main-menu">
-    <input type="text" name="nama" placeholder="masukan nama" id="nama">
-    <div>
-      <p> pilih karakter </p>
-      <select name="" id='select-character'>
-        <option value="x">x</option>
-        <option value="s">s</option>
-      </select>
-    </div>
-  <button id="hight-score" class="btn"> hight score </button> -->
-  <button onclick="startGame()" class="btn"> start </button>
-  <!--</div>-->
+  <button onclick="startGame()" id="play-btn" class="btn hide"> start </button>
+
  <script src="script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
